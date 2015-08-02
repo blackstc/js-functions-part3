@@ -26,3 +26,17 @@ exports.getNegativeIndex = function(arr, characterFromEnd) {
   return reversedArr[postiveIndex];
 };
 
+exports.removeCharacter = function(str, charToRemove) {
+ var strArr = str.split("");
+ if (typeof charToRemove === 'number') {
+  charToRemove = charToRemove.toString();
+ }
+
+ for (var i = 0; i < strArr.length; i++) {
+   if (strArr[i] === charToRemove) {
+    strArr.splice(i, 1);
+   }
+ }
+ str = strArr.join("");
+ return str;
+};
