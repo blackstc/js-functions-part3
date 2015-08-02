@@ -20,7 +20,7 @@ describe('Create Object', function() {
 
 describe('Get Negative Index', function() {
   it('should return the value of the index starting from the end', function() {
-    expect(code.getNegativeIndex(['a', 'b', 'c', 'd', 'e'])).toEqual("c");
+    expect(code.getNegativeIndex(['a', 'b', 'c', 'd', 'e'], -3)).toEqual("c");
   });
 });
 
@@ -53,7 +53,7 @@ describe('Test Boolean Logic', function() {
 
 describe('Get Unique Values', function() {
   it('should return unique values from an array', function() {
-    expect(code.getStudentName(['m', 'n', 'm', 'r', 'r', 's'])).toEqual(['m', 'n', 'r', 's']);
-    expect(code.getStudentName(['michael', 'ben', 'kerry', 'ben'])).toEqual(['michael', 'ben', 'kerry']);
+    expect(code.getUniqueValues(['m', 'n', 'm', 'r', 'r', 's'])).toEqual(['m', 'n', 'r', 's']);
+    expect(code.getUniqueValues(['michael', 'ben', 'kerry', 'ben'])).toEqual(['michael', 'ben', 'kerry']);
   });
 });
