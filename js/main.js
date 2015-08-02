@@ -40,3 +40,13 @@ exports.removeCharacter = function(str, charToRemove) {
  str = strArr.join("");
  return str;
 };
+
+exports.outputObject = function(obj) {
+  var strArr = [];
+  for(var i in obj) {
+    strArr.push(i + " is " + obj[i]);
+  }
+
+  var results = strArr.join(", ");
+  return results;
+};

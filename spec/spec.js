@@ -34,7 +34,7 @@ describe('Remove Character', function() {
 
 describe('Output Object', function() {
   it('should return object in a group of strings', function() {
-    expect(code.outputObject({john: 10, jerry: 11, jenny: 12 })).toEqual("john is 10, jerry is 20, and jenny is 30");
+    expect(code.outputObject({john: 10, jerry: 20, jenny: 30})).toEqual("john is 10, jerry is 20, jenny is 30");
   });
 });
 
