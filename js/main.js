@@ -1,7 +1,3 @@
-// add scripts
-
-console.log("sanity check!");
-
 exports.getStudentName = function(student) {
   return student.name;
 };
@@ -48,5 +44,46 @@ exports.outputObject = function(obj) {
   }
 
   var results = strArr.join(", ");
+  return results;
+};
+
+exports.getVowels = function(str) {
+  var strArr = str.split("");
+  var vowelArr = ["a", "e", "i", "o", "u"];
+  var results = [];
+
+  for (var i = 0; i < vowelArr.length; i++) {
+    for (var j = 0; j < strArr.length; j++) {
+      if (vowelArr[i] === strArr[j]) {
+        results.push(vowelArr[i]);
+        break;
+      }
+    }
+  }
+  return results;
+};
+
+exports.testBooleanLogic = function(arr) {
+  var counter = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === true) {
+      counter++;
+    }
+  }
+  if (counter > 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+exports.getUniqueValues = function(arr) {
+  var results = [];
+  for (var i = 0; i < arr.length; i++) {
+    var current = arr[i];
+    if (results.indexOf(current) < 0) {
+      results.push(current);
+    }
+  }
   return results;
 };
